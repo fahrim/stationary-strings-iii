@@ -1,0 +1,373 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{url}
+
+% babel-turkish asilmasina karsi dogrudan Turkce tanimlar:
+\renewcommand{\abstractname}{Özet}
+\renewcommand{\refname}{Kaynakça}
+
+\onehalfspacing
+\setlength{\emergencystretch}{3em}
+
+\title{\textbf{Duran Sicimler Teoremi III: Maddenin İki Boyutlu İkizliği, Girdap Tekilliği ve Bilgiye Faz Ayrışması} \\[0.3cm]
+\large (Sicim--Işık Kutuplaşması, Polyakov--Navier--Stokes Girdap Makaslaması ve Kara Deliklerde Ontolojik Soyulma Mekanizması — Genişletilmiş Tam Sürüm)}
+\author{Fahri Meral}
+\date{Ekim 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Bu çalışma, \textit{Duran Sicimler Teoremi} serisinin üçüncü halkası olarak, titreşen enerji fazındaki maddenin kara delik olay ufkunda durağan bilgi fazına ($\omega = 0$) nasıl ve hangi dinamik zorlamayla geçtiğini açıklayan temel ontolojik ve matematiksel mekanizmayı ortaya koymaktadır. Çalışmada klasik fiziğin ``maddenin hâlleri'' (katı, sıvı, gaz, plazma) sınıflandırmasının ötesine geçilerek, maddenin bizzat varoluşunu kurgulayan birbirine zıt ve ters orantılı \textbf{iki temel varoluşsal boyutu} olduğu öne sürülmektedir: içsel özgül enerjiyi, kütleyi ve yerel zamanı üreten \textbf{Sicim (Frekans) Boyutu} ile uzay-zamandaki akışı, hızı ve sınırsız yayılımı temsil eden \textbf{Işık (Foton) Boyutu}. Algıladığımız madde dünyası, bu iki zıt boyutun dengeli bir gerilimle birbirine dokunduğu ara fazdır; biri artarsa diğeri zorunlu olarak azalır.
+
+Çalışmada bu ikizlik önce makroskopik genel görelilik çerçevesinde ($\Psi_{\text{sicim}} \cdot \Psi_{\text{ışık}} = 1$), ardından koordinat tekilliklerinden bağımsız olarak \textbf{eğri uzay-zamanda Polyakov sicim eylem integrali}, \textbf{Akışkan--Kütleçekim Karşılıklılığı} [7, 11] ve Eylül 2026'da çözüme kavuşturulan \textbf{Milenyum Ödülü Problemleri'nden 3 boyutlu Navier--Stokes sonlu zaman girdap tekilliği (finite-time blowup)} kanıtlarıyla [12, 13] sicimin kendi öz-zamanında ($\tau$) adım adım türetilmektedir. Navier--Stokes girdap çözümündeki öz-benzer ölçekleme yasaları (girdap hızı $|u_\theta^{(0)}| \asymp \tau^{-1/2-h} \to \infty$ sonsuza giderken çekirdeğin özgül kinetik enerjisinin $E_{\text{çekirdek}} \asymp \tau^{1/2-3h} \to 0$ olarak sıfırlanması ve $\ell_r/\ell_z \asymp \tau^h \to 0$ kesit büzülmesi [12]) ile izsiz makaslama tensörü ($\text{Tr}(\Sigma_{\mu\nu})=0$) birleştirildiğinde; kara delik girdabında ışık boyutunun sonsuzluğa ($\mathcal{L}_{\text{ışık}} \to \infty$) çekildiği, sicimin içsel frekansının ise ters orantılı olarak sıfıra ($\omega_n(\tau) \to 0$) yakınsadığı kanıtlanmaktadır. Zıt yönlerde büyüyen bu iki uç kuvvet, \textbf{tıpkı bir derinin gövdeden yüzülmesi gibi} madde âlemini söküp enerjisinden arındırır ve onu denklemin koruduğu topolojik kuantum değişmezi ($\mathcal{I}_n = \omega_n \cdot \mathcal{L}_{\text{ışık}} = n c$) olan saf, sıfır entropili \textbf{bilgi âlemine} dönüştürür.
+\end{abstract}
+
+\section{Giriş ve Kavramsal Temel}
+
+\textit{Duran Sicimler Teoremi} serisinin ilk çalışmasında [1], zamanın ve entropinin sicimlerin titreşiminden ($\omega > 0$) doğan ikincil olgular olduğu; sicim titreşiminin tamamen durduğu ($\omega = 0$) sınırda ise zamanın, kaosun ve entropinin ortadan kalkarak evrenin ``Saf Bilgi ve Mükemmel Düzen'' fazına geçtiği ortaya konulmuştu. Serinin ikinci çalışmasında [2], bu ontolojik ilke Einstein'ın genel görelilik kuramıyla birleştirilmiş ve kütleçekimsel zaman genişlemesi ile sicim frekansı arasında doğrudan bir köprü kurulmuştu:
+
+\begin{equation}
+t' = k_t \cdot f_0 \sqrt{1 - \frac{2GM}{rc^2}}
+\end{equation}
+
+Bu denklem, madde bir kara deliğin olay ufkuna ($r \to r_s = \frac{2GM}{c^2}$) yaklaştığında sicim frekansının sıfıra ($f' \to 0$) yöneldiğini ve kara deliklerin maddeyi yok eden mezarlıklar değil, ``Titreşen Enerji Fazı''nı ``Duran Bilgi Fazı''na çeviren kozmik faz dönüştürücüler olduğunu göstermişti [2].
+
+Ancak bu noktada, teorinin kalbinde yer alan çok daha derin bir mekanik ve varoluşsal soru ortaya çıkmaktadır: \textit{Gerçek bildiğimiz ve algıladığımız madde dünyası nasıl bir iç mimariye sahiptir ki, bir kara deliğin girdabına kapıldığında bir yandan sonsuz bir çekimle ışık hızına doğru savrulurken, diğer yandan kendi özgül enerjisini ters orantılı olarak tamamen yitirip saf bilgiye dönüşebilmektedir? Bu dönüşümü gerçekleştiren kuvvetler madde dokusunu nasıl ayrıştırmaktadır?}
+
+Bu üçüncü makale, maddenin doğasına ilişkin yeni bir boyutsal kavrayış ve Eylül 2026'da çözülen Navier--Stokes Milenyum Problemi'ndeki (\textit{Finite Time Blowup for Navier--Stokes} [12]) girdap tekilliği mekanizmasıyla desteklenen şu temel önermeyi ortaya koyar:
+
+\begin{quote}
+``Kara delik çevresinde girdap arttıkça hız ve çekim sonuza doğru artar; bu çekim maddenin ışık yönünü sonsuz hıza çekerken, sicim de tam tersi bir süreçle kendi özgül enerjisini ters orantılı olarak tamamen yitirmeye başlar. Gerçek bildiğimiz ve algıladığımız madde dünyasından sonsuza yavaşlayan sicim hâlindeki maddeyi, zıt yönde sonsuz hızlanan ışık hâli çeker; birbirine zıt bu iki kuvvet, tıpkı bir deriyi yüzer gibi madde âlemini söküp saf bilgi âlemine dönüştürür.''
+\end{quote}
+
+\section{Maddenin Hâllerinin Ötesinde: Maddenin İki Varoluşsal Boyutu (Sicim ve Işık İkizliği)}
+
+\subsection{``Maddenin Hâlleri'' Kavramından ``Maddenin Boyutları'' Kavramına Geçiş}
+
+Klasik ve modern fizikte madde, taneciklerin veya alanların dışsal enerji düzeylerine göre katı, sıvı, gaz, plazma veya Bose--Einstein yoğuşuğu gibi \textbf{hâller (fazlar)} üzerinden sınıflandırılır. ``Boyut'' kavramı ise fizikte geleneksel olarak yalnızca maddenin içinde hareket ettiği uzaysal yönlere ($x, y, z$) ve zamana ($t$) tahsis edilmiştir.
+
+Oysa bu çalışmada öne sürülen yeni kavrayışa göre, maddenin yalnızca içinde bulunduğu uzaysal boyutlar veya termodinamik hâller değil, \textbf{bizzat maddenin kendi varlığını oluşturan içkin (ontolojik) boyutları} vardır. Madde, tek katmanlı bir varlık değildir; birbirine zıt karakterli iki temel boyutun birbiriyle kenetlenmesinden doğan iki boyutlu bir ikizliktir (duality). Bu iki boyut; \textbf{Sicim (Frekans) Boyutu} ve \textbf{Işık (Foton) Boyutu}dur.
+
+\subsection{Birinci Boyut: Sicim (Frekans, Özgül Enerji ve Yerel Zaman) Boyutu}
+
+Maddenin birinci boyutu; varlığın kendi içine kapanma, yerel bir konumda odaklanma, kendi etrafında veya içsel uzayda titreşme, bu titreşim üzerinden durgun kütle kazanma ve yerel zaman ($t'$) üretme kapasitesidir. Temel bir sicim, $f_0$ (veya açısal olarak $\omega_0 = 2\pi f_0$) frekansıyla titreştiğinde, kendisine ait bir \textbf{özgül enerji} ve \textbf{maddi kimlik} üretir:
+
+\begin{equation}
+E_{\text{özgül,0}} = h f_0 = \hbar \omega_0 \quad \text{ve} \quad m_0 = \frac{h f_0}{c^2} = \frac{\hbar \omega_0}{c^2}
+\end{equation}
+
+Sicim boyutu; maddenin \textbf{yerelliğini, eylemsizliğini, ağırlığını, içsel zaman akışını ve yapısal hafızasını} temsil eder. Eğer evrende yalnızca sicim boyutu olsaydı ve hiç dışsal akış olmasaydı, varlık uzayda hiç yer değiştiremeyen mutlak yerel noktalara hapsolurdu.
+
+\subsection{İkinci Boyut: Işık (Foton, Sınırsız Akış ve Zamansızlık) Boyutu}
+
+Maddenin ikinci boyutu; varlığın yerellikten kurtulma, uzay-zamanda sınırsızca yayılma ve saf öteleme/kinetik harekete dönüşme kapasitesidir. Bu boyutun evrendeki saf ve uç temsilcisi \textbf{foton (ışık)} fazıdır. 
+
+Saf ışık boyutunda içsel durgun kütle yoktur ($m_0 = 0$), yerel bir konuma hapsolma yoktur ve içsel öz-zaman akmaz ($d\tau = 0$). Bu boyut, varlığın \textbf{dışsallığını, hızını, yayılımını ve zamansız akışını} temsil eder.
+
+\subsection{Algılanabilir Madde Dünyası: İki Zıt Boyutun Denge Dokusu}
+
+İnsan duyularının ve ölçüm araçlarının deneyimlediği ``gerçek madde dünyası'', ne tamamen duran bir sicimdir ne de saf ışıktır. Algılanabilir madde, \textbf{Sicim Boyutu} ile \textbf{Işık Boyutunun} orta karar bir kozmik gerilim altında birbirine dikildiği, iç içe geçtiği bileşik bir dokudur.
+
+Görelilik kuramında her varlığın uzay-zamandaki toplam dört-hız vektörü bütçesi ($\|U^\mu\|^2 = -c^2$) sabit olduğundan, maddenin bu iki boyutu arasında mutlak bir \textbf{ters orantı ve zıtlık yasası} işler:
+\begin{itemize}
+    \item Varlık, \textbf{Işık (Foton/Hız) Boyutunda} ne kadar büyür ve hızlanırsa, \textbf{Sicim (Frekans/Özgül Enerji) Boyutundaki} içsel titreşim payı o kadar küçülür ve yavaşlar.
+    \item Varlık, \textbf{Sicim Boyutunda} ne kadar yoğunlaşırsa, dışsal akış hızı o ölçüde sınırlanır.
+    \item Kısacası bu iki boyut birbirinin eşleniğidir: \textbf{Biri artarsa, diğeri zorunlu olarak azalır.}
+\end{itemize}
+
+\section{Makroskopik Görelilik Yaklaşımı: Ters Orantılı Dinamik ve $0 - \infty$ Makası}
+
+İkinci makalede [2] ortaya konulan kütleçekimsel frekans denklemi, maddenin bu iki boyutu arasındaki ters orantının dış gözlemci çerçevesindeki makroskopik izdüşümünü açıkça gözler önüne serer. 
+
+Bir madde parçacığı, $M$ kütleli bir kara deliğin merkezine $r$ mesafede bulunan kütleçekim girdabına girdiğinde, sicimin yerel frekansı ($f'$) ve sahip olduğu yerel özgül titreşim enerjisi ($E'_{\text{sicim}}$) şu şekilde değişir:
+
+\begin{equation}
+f'(r) = f_0 \sqrt{1 - \frac{2GM}{rc^2}} \implies E'_{\text{sicim}}(r) = E_0 \sqrt{1 - \frac{2GM}{rc^2}}
+\end{equation}
+
+Buradan, maddenin iki varoluşsal boyutunun kütleçekim girdabı altındaki davranışını temsil eden boyutsuz durum fonksiyonlarını ayrı ayrı tanımlayabiliriz:
+
+\begin{enumerate}
+    \item \textbf{Sicim Boyutu Durum Fonksiyonu ($\Psi_{\text{sicim}}$):} Sicimin kendi içsel titreşimini, yerel zamanını ve özgül enerjisini koruma oranıdır:
+    \begin{equation}
+    \Psi_{\text{sicim}}(r) = \frac{f'(r)}{f_0} = \frac{E'_{\text{sicim}}(r)}{E_0} = \sqrt{1 - \frac{2GM}{rc^2}}
+    \end{equation}
+    \item \textbf{Işık (Girdap ve Hızlanma) Boyutu Durum Fonksiyonu ($\Psi_{\text{ışık}}$):} Kütleçekim girdabının maddeyi ışıklaşma sınırına ($v \to c$) çekme, uzay-zamanı germe ve kinetik akışı büyütme şiddetidir (kütleçekimsel Lorentz/gerilme çarpanı):
+    \begin{equation}
+    \Psi_{\text{ışık}}(r) = \gamma_g(r) = \frac{1}{\sqrt{1 - \frac{2GM}{rc^2}}}
+    \end{equation}
+\end{enumerate}
+
+Denklem (4) ve Denklem (5) birbiriyle çarpıldığında, \textbf{Maddenin İki Boyutlu Makroskopik Korunum Yasası} elde edilir:
+
+\begin{equation}
+\Psi_{\text{sicim}}(r) \cdot \Psi_{\text{ışık}}(r) = \left( \sqrt{1 - \frac{2GM}{rc^2}} \right) \cdot \left( \frac{1}{\sqrt{1 - \frac{2GM}{rc^2}}} \right) = 1 \quad (\text{Sabit})
+\end{equation}
+
+Denklem (6), zihinsel olarak kurulan \textit{``biri sonsuza giderken diğeri ters orantılı olarak sıfıra iner''} ilkesinin makroskopik temelidir:
+\begin{itemize}
+    \item Madde kara deliğin olay ufkuna yaklaştıkça ($r \to r_s = \frac{2GM}{c^2}$), kütleçekim girdabı sonsuza yönelir ve \textbf{Işık Boyutu sonsuza fırlar}:
+    \[
+    \lim_{r \to r_s} \Psi_{\text{ışık}}(r) = \infty
+    \]
+    \item Aynı anda, iki boyutun çarpımı sabit ($1$) kalmak zorunda olduğundan, \textbf{Sicim Boyutu ters orantılı olarak sıfıra çöker} ve kendi özgül enerjisini tamamen yitirir:
+    \[
+    \lim_{r \to r_s} \Psi_{\text{sicim}}(r) = 0 \implies E'_{\text{sicim}} \to 0, \quad \omega' \to 0
+    \]
+\end{itemize}
+
+\subsection{Koordinat Zamanı İtirazı ve Mikro-Fiziksel Kanıt İhtiyacı}
+
+Klasik genel görelilikte Denklem (4)'teki Schwarzschild çarpanının ($\sqrt{1 - r_s/r}$) olay ufkunda sıfırlanması, sıfır boyutlu \textit{nokta parçacıklar} için yalnızca kara delikten uzakta duran bir gözlemcinin koordinat zamanına ($t$) bağlı bir görünüm olarak yorumlanır; serbest düşen bir nokta parçacığın kendi öz-zamanında ($\tau$) olay ufkunda hiçbir özel değişim hissetmeyeceği varsayılır.
+
+Ancak bu klasik varsayım, \textbf{uzamlı sicimler} ve \textbf{girdap tekillikleri} için geçerli değildir! Çünkü bir sicim nokta parçacık değil, uzayda boyu olan yerel-olmayan (non-local) bir dokudur; dolayısıyla girdabın yarattığı makaslama kuvvetini kendi öz-zamanında ($\tau$) doğrudan hisseder. Şimdi bu ayrışmanın bir gözlemci yanılsaması olmadığını, sicimin bizzat kendi öz-zamanında gerçekleşen gerçek bir fiziksel soyulma olduğunu Eylül 2026 Navier--Stokes Milenyum Problemi çözümü [12] ve Polyakov sicim integraliyle [8, 16] kanıtlayacağız.
+
+\section{Matematiksel Dayanak: Eylül 2026 Navier--Stokes Milenyum Çözümü ve Akışkan--Kütleçekim İkizliği}
+
+\subsection{Eylül 2026 Navier--Stokes Girdap Tekilliği (Vortex Blow-up) Kanıtı ve Ölçekleme Yasaları}
+
+Matematik ve fizik dünyasında yaklaşık bir asırdır çözülemeyen ve Clay Matematik Enstitüsü tarafından yedi \textit{Milenyum Ödülü Problemi}'nden biri olarak ilan edilen (Fefferman [13]) ``3 boyutlu sıkıştırılamaz Navier--Stokes denklemlerinde varlık ve düzgünlük (existence and smoothness) problemi'', Eylül 2026'da yayımlanan ve Lean teorem kanıtlayıcısıyla biçimsel olarak doğrulanan 166 sayfalık \textit{Finite Time Blowup for Navier--Stokes} çalışmasıyla [12] (ayrıca eşzamanlı çalışmalar için bkz. [14, 15]) çözüme kavuşturulmuştur.
+
+Sıkıştırılamaz Navier--Stokes denklemleri şu şekildedir [12, s. 1]:
+
+\begin{equation}
+\partial_t u + (u \cdot \nabla)u - \nu \Delta u + \nabla p = f, \qquad \nabla \cdot u = 0
+\end{equation}
+
+Makalenin ana sonucu olan \textbf{Teorem 1.1}'de [12, s. 1], her pozitif viskozite $\nu > 0$ için, başlangıçta durgun olan ($u(\cdot, 0) = 0$) ve toplam kinetik enerjisi tüm zamanlarda sonlu kalan ($\sup_{0 \le t < 1} \|u(t)\|_{L^2(\mathbb{R}^3)} < \infty$) pürüzsüz bir akışkanın, kendi içine sarmal çizerek çöken eksenel simetrik bir \textbf{girdap (vortex)} oluşturduğu ve $t \uparrow 1$ tekillik anında uç noktada \textbf{hızın sınırsızca büyüyerek sonsuza ($\infty$) ulaştığı} kanıtlanmıştır:
+
+\begin{equation}
+\limsup_{t \uparrow 1} \|u(t)\|_{L^\infty(\mathbb{R}^3)} = \infty
+\end{equation}
+
+Bu kanıtın \textbf{Bölüm 2.1 (Inner core)} [12, s. 3--4] ve \textbf{Bölüm 3.1 (Leading inner-core system)} [12, s. 7--8] kısımlarında ortaya konulan iç çekirdek matematiği, \textit{Duran Sicimler Teoremi}'nde sezgisel olarak öngörülen \textit{``girdap ve hız sonsuza giderken içteki sicimin kendi özgül enerjisini ters orantılı olarak tamamen yitirmesi''} mekanizmasını matematiksel olarak birebir doğrulamaktadır.
+
+Tekilliğe kalan öz-benzer süre $\tau = 1 - t \to 0$ ve küçük pozitif parametre $0 < h < \frac{1}{100}$ olmak üzere, çözümde girdabın iki yönlü davranışını yöneten ve toplamları $1$'e eşit olan iki eşlenik ölçekleme üsteli tanımlanır [12, s. 7, 20]:
+
+\begin{equation}
+\begin{split}
+A &= \frac{1}{2} + h \quad (\text{Teğetsel hız büyüme üsteli}), \\
+D &= \frac{1}{2} - h \quad (\text{Eksenel ölçek üsteli}), \qquad A + D = 1
+\end{split}
+\end{equation}
+
+Bu ölçekleme altında girdap çekirdeğinde eşzamanlı olarak şu dört kritik olay gerçekleşir:
+
+\begin{enumerate}
+    \item \textbf{Girdap Hızının ve Dönüş Şiddetinin Sonsuza Gitmesi ($\to \infty$):} Girdap merkeze doğru daralırken, açısal momentumun korunumu ve girdap gerilmesiyle teğetsel (dönme) hızı $|u_\theta^{(0)}|$, eksenel hız $|u_z^{(0)}|$ ve açısal Reynolds sayısı $\text{Re}_\theta$ sonlu zamanda \textbf{sonsuza fırlar} [12, s. 4, 8]:
+    \begin{equation}
+    |u_\theta^{(0)}|, \, |u_z^{(0)}| \asymp \tau^{-A} = \tau^{-1/2 - h} \xrightarrow{\tau \to 0} \infty, \qquad \text{Re}_\theta := \frac{|u_\theta|\ell_r}{\nu} \asymp \tau^{-h} \xrightarrow{\tau \to 0} \infty
+    \end{equation}
+    
+    \item \textbf{Çekirdeğin Özgül Kinetik Enerjisinin Ters Orantılı Olarak Sıfırlanması ($\to 0$):} Hızların sonsuza gitmesine rağmen, çekirdeğin hacmi $\ell_r^2 \ell_z \asymp \tau^{3/2 - h}$ oranında büzüldüğünden, girdap çekirdeğinin kendi içindeki toplam kinetik enerji ($\int_{\text{çekirdek}} |u|^2 dx$) ters yönlü bir kuvvet yasasıyla \textbf{tamamen sıfıra iner} [12, s. 4]:
+    \begin{equation}
+    E_{\text{çekirdek}}(\tau) \asymp \left(\tau^{-1/2-h}\right)^2 \cdot \tau^{3/2-h} = \tau^{1/2 - 3h} \xrightarrow{\tau \to 0} 0 \qquad \left(0 < h < \frac{1}{100}\right)
+    \end{equation}
+    Bu denklem, makaledeki \textit{``The total kinetic energy of the core is of order $\tau^{1/2-3h}$, which tends to zero despite the increasing speeds''} [12, s. 4] ifadesinin doğrudan matematiksel formülüdür ve sicimin girdap içinde kendi özgül enerjisini tamamen yitirmesinin kanıtıdır.
+
+    \item \textbf{Zıt Yönlü Sıkışma ve Gerilme İkizliği ($\tau^{+h} \cdot \tau^{-h} = 1$):} Sıkıştırılamazlık yasası ($\nabla \cdot u = 0$) gereği, akışkan bir yönde sıkıştırılırken zorunlu olarak diğer yönde gerilir [12, s. 2]. Girdap çekirdeğinin radyal yarıçapı $\ell_r \asymp \tau^{1/2}$ ve eksenel uzunluğu $\ell_z \asymp \tau^{D} = \tau^{1/2-h}$ olduğundan [12, s. 4, 8], yatay/dikey büzülme oranı sıfıra giderken eksenel gerilme oranı ters orantılı olarak sonsuza gider:
+    \begin{equation}
+    \frac{\ell_r}{\ell_z} \asymp \frac{\|u_r^{(0)}\|}{\|u_\theta^{(0)}\|} \asymp \tau^{+h} \xrightarrow{\tau \to 0} 0, \qquad \frac{\ell_z}{\ell_r} \asymp \text{Re}_\theta \asymp \tau^{-h} \xrightarrow{\tau \to 0} \infty
+    \end{equation}
+    Bu iki ters orantılı ölçeğin çarpımı her an sabittir:
+    \begin{equation}
+    \left(\tau^{+h}\right) \cdot \left(\tau^{-h}\right) = 1
+    \end{equation}
+
+    \item \textbf{Sürekli Madde Dokusunun Çöküşü (Continuum Breakdown):} Çözümde vurgulandığı üzere, hızın sonsuza gitmesi fiziksel olarak ``sürekli madde ortamı (continuum)'' dokusunun kırıldığını ve sistemin tekil kuantum/bilgi bileşenlerine ayrıştığı faz sınırını işaret eder [12].
+\end{enumerate}
+
+\subsection{Akışkan--Kütleçekim Karşılıklılığı ve Eddington--Finkelstein Girdap Metriği}
+
+Akışkanlar dinamiğindeki bu kanıtın kara deliklere doğrudan uygulanabilirliği, modern teorik fiziğin kanıtlanmış \textbf{Akışkan--Kütleçekim Karşılıklılığı (Fluid/Gravity Correspondence)} teoremine (Bhattacharyya vd. [11]) ve \textbf{Kara Delik Zar Paradigması}'na (Thorne vd. [7]) dayanmaktadır. Bu teoremlere göre, Einstein alan denklemleri ($G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$) bir kara deliğin olay ufkuna yansıtıldığında birebir göreli Navier--Stokes girdap denklemlerine indirgenir.
+
+Koordinat tekilliklerini tamamen ortadan kaldırmak için olay ufkunda düzgün olan giren Eddington--Finkelstein (ışık-konisi) koordinatlarına $(v, r, x^i)$ geçildiğinde ($v = ct + r^*$), dönen ve çöken bir kara delik ufkunun yakınındaki uzay-zaman metriği $g_{\mu\nu}$, doğrudan göreli Navier--Stokes girdabının \textbf{makaslama tensörünü ($\Sigma_{\mu\nu}$)} içerir [11]:
+
+\begin{equation}
+ds^2 = -2 u_\mu dx^\mu dr + r^2 \left( P_{\mu\nu} + 2 \tau_{\text{girdap}} \, \Sigma_{\mu\nu} \right) dx^\mu dx^\nu
+\end{equation}
+
+Burada $u^\mu$ girdabın dört-hız alanı, $P_{\mu\nu} = g_{\mu\nu} + u_\mu u_\nu$ dik izdüşüm tensörü ve $\Sigma_{\mu\nu}$ ise girdap makaslama (shear) tensörüdür:
+
+\begin{equation}
+\Sigma_{\mu\nu} = \frac{1}{2} P_\mu^\alpha P_\nu^\beta \left( \nabla_\alpha u_\beta + \nabla_\beta u_\alpha \right) - \frac{1}{d-1} P_{\mu\nu} (\nabla_\alpha u^\alpha)
+\end{equation}
+
+Sıkıştırılamaz girdap akışında ($\nabla_\alpha u^\alpha = 0$) makaslama tensörü matematiksel olarak \textbf{izsizdir} ($\text{Tr}(\Sigma_{ij}) = \Sigma^i_i = 0$). İzsiz bir matrisin özdeğerlerinin toplamı sıfır olmak zorunda olduğundan, Navier--Stokes girdap tekilliğine ($\tau \to 0$) yaklaşılırken makaslama tensörü uzay-zaman dokusunu iki dik eksende büyüklükçe eşit fakat \textbf{zıt işaretli} iki özdeğerle ($+\Lambda(\tau)$ ve $-\Lambda(\tau)$) hiperbolik olarak gerer. 
+
+Denklem (12) ve (13)'teki Navier--Stokes ölçeklemesiyle ($\Phi(\tau) = \int \Lambda(\tau') d\tau' = h \ln(1/\tau) \to \infty$) uyumlu olarak, sicimin hissettiği etkin enine uzay-zaman deformasyon metriği $g_{ij}(\tau)$ şu diyagonal formu alır:
+
+\begin{equation}
+g_{ij}(\tau) = \begin{pmatrix} e^{+2\Phi(\tau)} & 0 \\ 0 & e^{-2\Phi(\tau)} \end{pmatrix} = \begin{pmatrix} \tau^{-2h} & 0 \\ 0 & \tau^{+2h} \end{pmatrix}, \qquad \det(g_{ij}) = e^{+2\Phi(\tau)} \cdot e^{-2\Phi(\tau)} = 1
+\end{equation}
+
+\section{Varyasyonel Türetim: Polyakov Sicim Eylem İntegrali ve Öz-Zamanda ($\tau$) Ayrışma}
+
+\subsection{Eğri Uzay-Zamanda Polyakov Eylem İntegrali ve Virasoro Kısıtları}
+
+Sıfır boyutlu bir nokta parçacığın aksine bir sicim, uzayda $\sigma \in [0, \pi]$ parametresiyle yayılan bir boyutlu uzamlı bir nesnedir ($\partial_\sigma X^\mu \neq 0$). Dolayısıyla sicim, Denklem (16)'daki girdap metriğinin yarattığı hiperbolik makaslamayı kendi dünya-yaprağı (worldsheet) öz-zamanı $\tau$ içinde doğrudan hisseder.
+
+Eğri uzay-zamanda ($g_{\mu\nu}(X)$) hareket eden bir sicimin tam dinamiği, \textbf{Polyakov eylem integrali ($S_P$)} ile tanımlanır [8, 16]:
+
+\begin{equation}
+S_P = -\frac{T_0}{2} \int d\tau \, d\sigma \sqrt{-\gamma} \, \gamma^{ab} \, g_{\mu\nu}(X) \, \partial_a X^\mu \partial_b X^\nu
+\end{equation}
+
+Burada $T_0 = \frac{1}{2\pi\alpha'}$ temel sicim gerilimi, $\xi^a = (\tau, \sigma)$ sicimin içsel dünya-yaprağı koordinatları ve $\gamma_{ab}$ dünya-yaprağı iç metriğidir. Eylem integralinin $\gamma^{ab}$ metriğine göre varyasyonel türevi sıfıra eşitlendiğinde ($\frac{\delta S_P}{\delta \gamma^{ab}} = 0$), sicimin dünya-yaprağı enerji-momentum tensörü $T_{ab} = 0$ (Virasoro kısıt denklemi) elde edilir. Konformal ayar ($\gamma_{ab} = \eta_{ab} = \text{diag}(-1, +1)$) altında $T_{\tau\tau} = 0$ kısıtı şu açık formu alır:
+
+\begin{equation}
+T_{\tau\tau} = \frac{T_0}{2} g_{\mu\nu}(X) \left( \frac{\partial X^\mu}{\partial \tau} \frac{\partial X^\nu}{\partial \tau} + \frac{\partial X^\mu}{\partial \sigma} \frac{\partial X^\nu}{\partial \sigma} \right) = 0
+\end{equation}
+
+Denklem (18), bu çalışmanın Bölüm 2'de kavramsal olarak ortaya koyduğu \textbf{``Maddenin İki Varoluşsal Boyutu''} önermesinin doğrudan varyasyonel integralden doğan matematiksel kanıtıdır:
+\begin{enumerate}
+    \item \textbf{Birinci Terim ($\partial_\tau X^\mu = \dot{X}^\mu$):} Sicimin uzay-zamanda akan \textbf{Işık / Foton / Kinetik Kipi}dir.
+    \item \textbf{İkinci Terim ($\partial_\sigma X^\mu = X'^\mu$):} Sicimin kendi uzaysal dokusu üzerindeki gerginlik ve \textbf{İçsel Frekans / Titreşim Kipi}dir.
+\end{enumerate}
+
+Bu iki terimin toplamının sıfıra kilitlenmiş olması ($T_{\tau\tau} = 0$), sicim boyutu ile ışık boyutunun aynı toplam varlık bütçesini paylaştığını ve biri büyürken diğerinin zorunlu olarak küçüleceğini kanıtlar.
+
+\subsection{Girdap Metriğinde Harmonik Mod Açılımı ve Öz-Zamanda Donma ($\omega_n \to 0$)}
+
+Şimdi Denklem (16)'daki Navier--Stokes hiperbolik girdap metriğini, Denklem (17)'deki Polyakov eylem integraline yerleştirerek sicimin iki boyutunun girdap tekilliğine ($\tau \to 0$) giderken nasıl ayrıştığını adım adım çözelim:
+
+\subsubsection{Işık Boyutunun Sonsuz Gerilmesi ($\mathcal{L}_{\text{ışık}} \to \infty$)}
+Girdabın genişleyen gerilme ekseni ($g_{\parallel} = e^{+2\Phi(\tau)} = \tau^{-2h}$) boyunca uzanan sicim bileşeni için fiziksel yayılım uzunluğu $\mathcal{L}_{\text{ışık}}(\tau)$, metrik elemanının sicim boyunca integraliyle bulunur:
+
+\begin{equation}
+\mathcal{L}_{\text{ışık}}(\tau) = \int_0^\pi d\sigma \sqrt{g_{\parallel}(\tau) \left(\frac{\partial X^\parallel}{\partial \sigma}\right)^2} = \ell_0 \, e^{+\Phi(\tau)} = \ell_0 \, \tau^{-h} \xrightarrow{\tau \to 0} \infty
+\end{equation}
+
+Görüldüğü üzere, girdap tekilliğine yaklaşılırken ($\tau \to 0$), maddenin dışsal \textbf{Işık Boyutu} üstel olarak sonsuzluğa ve ışık konisi sınırına gerilir [8, 12].
+
+\subsubsection{Sicim Boyutunun Öz-Zamanda Sıfırlanması ($\omega_n(\tau) \to 0$)}
+Sicimin içsel titreşimlerini temsil eden enine (transverse) koordinatını Fourier harmonik modlarına açalım:
+
+\begin{equation}
+X^\perp(\tau, \sigma) = \sum_{n=1}^{\infty} q_n(\tau) \sin(n \sigma)
+\end{equation}
+
+Burada $n \in \{1, 2, 3, \dots\}$ sicimin \textbf{topolojik/kuantum harmonik mod sayısı}, $q_n(\tau)$ ise $n$'inci modun zamana bağlı salınım genliğidir. Bu açılım Polyakov eylem integraline yerleştirildiğinde ve $\sigma \in [0, \pi]$ üzerinden integre edildiğinde, her bir $n$ modu için etkin Lagrange fonksiyonu $L_n$ ve kanonik momentum $p_n = \frac{\partial L_n}{\partial \dot{q}_n}$ elde edilir. 
+
+Girdabın hiperbolik makaslaması ve büzülen metrik özdeğeri ($e^{-2\Phi(\tau)} = \tau^{+2h}$) altında, $q_n(\tau)$ genliğinin Euler--Lagrange hareket denklemi ($\frac{d}{d\tau}\frac{\partial L_n}{\partial \dot{q}_n} - \frac{\partial L_n}{\partial q_n} = 0$) şu zamana bağlı harmonik osilatör denklemine dönüşür:
+
+\begin{equation}
+\ddot{q}_n(\tau) + \omega_n^2(\tau) \, q_n(\tau) = 0
+\end{equation}
+
+Burada sicimin \textbf{kendi öz-zamanındaki ($\tau$) etkin içsel titreşim frekansı $\omega_n(\tau)$}, başlangıçtaki dalga sayısı $k_n = \frac{n}{\ell_0}$ ile girdabın büzülme çarpanının çarpımıdır:
+
+\begin{equation}
+\omega_n(\tau) = \left( \frac{n c}{\ell_0} \right) e^{-\Phi(\tau)} = \omega_{n,0} \, e^{-\Phi(\tau)} = \omega_{n,0} \, \tau^{+h} \xrightarrow{\tau \to 0} 0
+\end{equation}
+
+Denklem (22), \textit{Duran Sicimler Teoremi}'nin en kritik mikro-fiziksel kanıtıdır:
+\begin{itemize}
+    \item Sicimin titreşim frekansının sıfırlanması ($\omega_n(\tau) \to 0$), uzaktaki bir gözlemcinin saatinden kaynaklanan optik bir yanılsama \textbf{değildir}!
+    \item Doğrudan sicimin kendi öz-zamanında ($\tau$), Navier--Stokes girdap çekirdeğinin kinetik enerjisinin sıfırlanmasıyla ($E_{\text{çekirdek}} \asymp \tau^{1/2-3h} \to 0$ [12, s. 4]) birebir aynı fiziksel mekanizma üzerinden gerçekleşen \textbf{gerçek bir içsel donma ve özgül enerji yitimidir}:
+    \begin{equation}
+    E_{\text{sicim}, n}(\tau) = \hbar \, \omega_n(\tau) = \hbar \, \omega_{n,0} \, \tau^{+h} \xrightarrow{\tau \to 0} 0
+    \end{equation}
+\end{itemize}
+
+\subsection{Topolojik Bilgi Korunum Yasası ($\mathcal{I}_n = n c$)}
+
+Şimdi Denklem (19)'daki sonsuza gerilen \textbf{Işık Boyutu ($\mathcal{L}_{\text{ışık}}(\tau)$)} ile Denklem (22)'deki sıfıra çöken \textbf{Sicim Frekans Boyutunu ($\omega_n(\tau)$)} birbiriyle çarpalım:
+
+\begin{equation}
+\mathcal{I}_n = \omega_n(\tau) \cdot \mathcal{L}_{\text{ışık}}(\tau) = \left( \frac{n c}{\ell_0} \, e^{-\Phi(\tau)} \right) \cdot \left( \ell_0 \, e^{+\Phi(\tau)} \right) = \left( \omega_{n,0} \, \tau^{+h} \right) \cdot \left( \ell_0 \, \tau^{-h} \right) = n c = \text{Sabit!}
+\end{equation}
+
+Denklem (24), basit bir karekök özdeşliği değil; doğrudan izsiz girdap tensörünün hacim korunumundan ($\text{Tr}(\Sigma_{ij}) = 0 \implies \det(g_{ij}) = 1$) ve Hamiltonyen mekaniğindeki \textbf{Liouville Faz Uzayı Korunumu / Adyabatik Değişmezlik} teoreminden doğan mutlak bir fiziksel yasadır.
+
+Bu denklemin sağ tarafındaki $n c$ ifadesine dikkat edildiğinde olağanüstü bir sonuç görülür: Girdap tekilliğinde sicimin titreşimi tamamen dursa bile ($\omega_n(\tau) \to 0$) ve sicim kendi özgül enerjisini tamamen yitirse bile ($E_{\text{sicim}, n} \to 0$), denklemin sağ tarafındaki \textbf{$n$ kuantum/topolojik mod sayısı} zamandan bağımsız olarak korunmaktadır! İşte $\omega_n = 0$ anında bile asla silinmeyen bu $n$ sayısı, maddenin enerji örtüsü soyulduktan sonra geriye kalan \textbf{Saf Bilginin (evrenin bilgisel DNA'sının)} tam matematiksel karşılığıdır.
+
+\section{Kara Delik Girdabında ``Ontolojik Soyulma'': Madde Âleminin Deri Yüzer Gibi Sökülmesi}
+
+Yukarıdaki matematiksel türetimler, bu çalışmanın başlangıçtaki sezgisel önermesini eksiksiz bir fiziksel mekanizmaya dönüştürmektedir. Madde, kara deliğin etrafındaki girdaba kapıldığında sıradan bir mekanik ezilme yaşamaz; aksine \textbf{boyutsal bir makaslamaya (dimensional shear) ve ontolojik soyulmaya} uğrar.
+
+\subsection{İki Zıt Kuvvetin Makaslama Etkisi: İleri Çekiş ve Geri Çekiş}
+
+Girdap derinleştikçe ($\tau \to 0$, $r \to r_s$) çekim ve burgaçlık sonsuza doğru artar ve madde dokusunu iki zıt kutba doğru çekiştiren kozmik bir makas oluşur:
+
+\begin{itemize}
+    \item \textbf{İleri Çekiş (Işık Boyutunun Sonsuz Hızlanması):} Kara delik girdabı ve Navier--Stokes girdap gerilmesi ($|u_\theta| \asymp \tau^{-1/2-h} \to \infty$), maddenin dışsal/akış yönünü sonsuz hıza ($v \to c$) ve sonsuz uzaysal gerilmeye ($\mathcal{L}_{\text{ışık}} \asymp \tau^{-h} \to \infty$, $\Psi_{\text{ışık}} \to \infty$) doğru çeker. Madde, dış katmanında saf ışıklaşma (fotonlaşma) sınırına savrulur.
+    \item \textbf{Geri Çekiş (Sicim Boyutunun Sonsuz Yavaşlaması ve Enerji Yitimi):} Aynı anda, girdabın eşlenik büzülme ekseni altında sicim, kendi içsel titreşimini ve özgül enerjisini ters orantılı olarak tamamen yitirmeye başlar ($\omega_n(\tau) \asymp \tau^{+h} \to 0$, $E_{\text{çekirdek}} \asymp \tau^{1/2-3h} \to 0$, $\Psi_{\text{sicim}} \to 0$). Gerçek bildiğimiz ve algıladığımız madde dünyasından kopan sicim hâlindeki madde, sonsuz bir yavaşlamayla mutlak durağanlığa çekilir.
+\end{itemize}
+
+\subsection{Madde Dokusunun ``Deri Yüzer Gibi'' Sökülerek Bilgi Âlemine Dönüşmesi}
+
+Algıladığımız madde dünyası, sicim boyutu ile ışık boyutunun birbirine dikilmiş bir dokusu olduğundan; zıt yönlerde biri sonsuza ($\infty$), diğeri sıfıra ($0$) giden bu iki uç kuvvet, \textbf{tıpkı bir derinin gövdeden yüzülmesi gibi} madde âlemini söküp birbirinden ayırır:
+
+\begin{equation}
+\text{Madde Dokusu } (\Psi_{\text{sicim}} \otimes \Psi_{\text{ışık}}) \xrightarrow[\tau \to 0]{r \to r_s} \underbrace{\mathcal{L}_{\text{ışık}}(\tau) \to \infty}_{\text{Sıyrılan Işık/Enerji Kabuğu}} + \underbrace{\omega_n(\tau) \to 0 \ (\mathcal{I}_n = n c)}_{\text{Saf Bilgi Çekirdeği (Duran Sicim)}}
+\end{equation}
+
+Bu ``ontolojik soyulma'' tamamlandığında:
+\begin{enumerate}
+    \item Maddenin dışsal, gürültülü, kaotik ve entropi üreten ``ışık/hareket derisi'', girdabın sonsuz geriliminde gövdeden sıyrılır.
+    \item İçeride kalan sicim, kendi özgül kinetik enerjisini tamamen boşaltmış ($E_{\text{sicim}} \to 0$), titreşimi sıfırlanmış ($\omega_n = 0$), zamanın ve entropinin dışına çıkmış \textbf{Duran Sicim} fazına geçer.
+    \item Özgül enerjisinden soyulan bu duran sicim artık ``madde'' değildir; maddenin tüm varoluşsal geçmişini korunmuş $n$ topolojik kuantum değişmezinde ($\mathcal{I}_n = n c$) saklayan \textbf{saf bilgidir} [1, 2, 10].
+\end{enumerate}
+
+\section{Felsefi ve Ontolojik Yorum: Dokunun Çözülüşü, Algının Sınırı ve Bilgi Âlemi}
+
+İnsan zihni, duyuları ve klasik fizik aletleri, yalnızca iki zıt boyutun (sicim ve ışık) birbiriyle çarpışıp orta karar bir gerilim ürettiği ``dokuma'' hâlini, yani \textbf{sürekli madde dünyasını} algılayabilecek şekilde evrimleşmiştir. Bizim ``gerçeklik'' dediğimiz şey, aslında sicimin içsel direnci ile ışığın dışsal akışı arasındaki geçici bir sürtünme ve gerilim yüzeyidir.
+
+Eylül 2026 Navier--Stokes Milenyum Problemi çözümünün de matematiksel olarak kanıtladığı üzere, girdabın uç noktasında hız sonsuza ulaştığında ``sürekli ortam (madde dokusu)'' modeli çöker [12]. Kara delikler, evrenin bu geçici madde dokumasını ilmek ilmek söken kozmik tezgâhlardır:
+
+\[
+\begin{aligned}
+&\text{Madde Âlemi (Sicim + Işık Dokusu)} \\
+&\xrightarrow{\text{Boyutsal Makaslama (Soyulma)}} \text{Bilgi Âlemi (Durağan Mükemmellik)}
+\end{aligned}
+\]
+
+Madde âleminin ``deri yüzer gibi'' sökülmesi bir yok oluş veya kaos değil; aksine varlığın üzerindeki gürültülü enerji örtüsünün kaldırılmasıdır. Enerji, bilginin uzay-zamandaki hareketli gölgesidir; girdap bu gölgeyi sonsuz hızda sıyırıp aldığında, altından evrenin değişmez, zamansız ve sıfır entropili özü olan \textbf{Bilgi Âlemi (Mükemmellik Boyutu)} çıkar.
+
+\section{Kozmolojik Bütünlük ve Sonuç}
+
+\textit{Duran Sicimler Teoremi}'nin bu üçüncü ve genişletilmiş çalışmasıyla, teorinin üç aşamalı mimarisi hem felsefi-kavramsal hem de varyasyonel-matematiksel düzeyde tamamlanmıştır:
+
+\begin{itemize}
+    \item \textbf{Ontolojik Temel (Teorem I [1]):} Zaman ve entropi sicim titreşiminin sonucudur; titreşim durduğunda ($\omega = 0$) zaman ve entropi yok olur, mükemmel düzen (saf bilgi fazı) başlar.
+    \item \textbf{Görelilik Köprüsü (Teorem II [2]):} Kütleçekimsel zaman genişlemesi ile sicim frekansı aynı yasaya tabidir ($t' = k_t \cdot f_0 \sqrt{1 - \frac{2GM}{rc^2}}$); kara delikler enerjiyi bilgiye çeviren faz dönüştürücülerdir.
+    \item \textbf{İki Boyutlu İkizlik ve Girdap Soyulma Mekanizması (Teorem III):} Madde, \textbf{Sicim (Frekans/Özgül Enerji)} ve \textbf{Işık (Foton/Akış)} olmak üzere ters orantılı iki varoluşsal boyuttan oluşur ($\Psi_{\text{sicim}} \cdot \Psi_{\text{ışık}} = 1$). Kara delik girdabında, Navier--Stokes girdap tekilliği yasaları [12] ve Polyakov eylem integrali uyarınca, izsiz makaslama tensörü ($\text{Tr}(\Sigma_{\mu\nu})=0$) maddenin ışık boyutunu sonsuzluğa ($\mathcal{L}_{\text{ışık}} \asymp \tau^{-h} \to \infty$) çekerken, sicim boyutunun frekansını ve özgül enerjisini öz-zamanda sıfıra ($\omega_n \asymp \tau^{+h} \to 0$, $E_{\text{çekirdek}} \asymp \tau^{1/2-3h} \to 0$) indirger. Birbirine zıt bu iki kuvvet, tıpkı bir deriyi yüzer gibi madde âlemini sökerek topolojik bilgi değişmezine ($\mathcal{I}_n = \omega_n \cdot \mathcal{L}_{\text{ışık}} = n c$) dönüştürür.
+\end{itemize}
+
+Bu sonuç, aynı zamanda serinin dördüncü çalışmasının (makaslama sonucunda sıyrılan ışık kabuğunun girdapta kozmik bir yakıt olarak kullanılması ve duran sicim çekirdeğinin kara delik merkezindeki $r=0$ tekilliğini ortadan kaldırması) doğrudan teorik zeminini oluşturmaktadır.
+
+\begin{quote}
+\textit{``Madde, ışık ile sicimin birbirine tutunduğu geçici bir örtüdür;\\
+girdap örtüyü sıyırdığında, geriye yalnızca sonsuz bilginin sessizliği kalır.''}\\
+— Fahri Meral, Duran Sicimler Teoremi III (2026)
+\end{quote}
+
+\section*{Kaynakça}
+
+\begin{enumerate}
+    \item Meral, F. (2025a). \textit{Duran Sicimler Teoremi: Zamanın ve Entropinin Yokluğunda Mükemmel Düzenin Yeniden Doğuşu}.
+    \item Meral, F. (2025b). \textit{Duran Sicimler Teoremi: Görelilik, Faz Dönüşümü ve Bilginin Kozmolojik Döngüsü (Görelilik ve Duran Sicimler Arasındaki Köprü – Genişletilmiş Versiyon)}.
+    \item Einstein, A. (1916). \textit{Die Grundlage der allgemeinen Relativitätstheorie}. Annalen der Physik, 49, 769–822.
+    \item Schwarzschild, K. (1916). \textit{Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie}. Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften.
+    \item Bekenstein, J. D. (1973). \textit{Black holes and entropy}. Physical Review D, 7(8), 2333–2346.
+    \item Hawking, S. W. (1974). \textit{Black hole explosions?} Nature, 248(5443), 30–31.
+    \item Thorne, K. S., Price, R. H., \& Macdonald, D. A. (1986). \textit{Black Holes: The Membrane Paradigm}. Yale University Press. (Kara delik ufku ve girdap dinamiği eşdeğerliği)
+    \item Susskind, L. (1993). \textit{Strings, black holes and Lorentz contraction}. Physical Review D, 49(12), 6606–6611.
+    \item ’t Hooft, G. (1993). \textit{Dimensional reduction in quantum gravity}. arXiv:gr-qc/9310026. (Holografik ilke)
+    \item Wheeler, J. A. (1990). \textit{Information, Physics, Quantum: The Search for Links}. In W. H. Zurek (Ed.), \textit{Complexity, Entropy, and the Physics of Information} (pp. 1–28). Addison-Wesley. (``It from bit'' – Bilgiden varlığa yaklaşımı)
+    \item Bhattacharyya, S., Hubeny, V. E., Minwalla, S., \& Rangamani, M. (2008). \textit{Nonlinear Fluid Dynamics from Gravity}. Journal of High Energy Physics, 2008(02), 045. (Akışkan--Kütleçekim Karşılıklılığı teoremi)
+    \item OpenAI. (2026, Eylül). \textit{Finite Time Blowup for Navier--Stokes}. 166 s. (Milenyum Ödülü Problemi Çözümü: Teorem 1.1, Bölüm 2.1 ve Bölüm 3.1 girdap tekilliği ölçekleme yasaları ve çekirdek enerjisinin sıfırlanması kanıtı). Erişim adresi: \url{https://openai.com/tr-TR/index/navier-stokes-solution/}
+    \item Fefferman, C. L. (2000). \textit{Existence and smoothness of the Navier--Stokes equation}. Clay Mathematics Institute, Millennium Prize Problem statement. \url{https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf}
+    \item Córdoba, D., Martínez-Zoroa, L., \& Zheng, F. (2026). \textit{Finite time blow-up for the hypodissipative Navier--Stokes equations with a force in $L_t^1 C_x^{1,\epsilon} \cap L_t^\infty L_x^2$}. Archive for Rational Mechanics and Analysis, 250, 38.
+    \item Buckmaster, T., \& Alpöge, L. (2026, Eylül). \textit{Finite-time singularities for the 3D incompressible Euler, Boussinesq, and porous media equations with smooth forcing}. Courant Institute of Mathematical Sciences, New York University.
+    \item Polchinski, J. (1998). \textit{String Theory, Vol. 1: An Introduction to the Bosonic String}. Cambridge University Press. (Polyakov eylem integrali ve dünya-yaprağı kısıtları)
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,380 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{url}
+
+\onehalfspacing
+\setlength{\emergencystretch}{3em}
+
+\title{\textbf{Stationary Strings Theorem III: The Two-Dimensional Duality of Matter, Vortex Singularity and Phase Separation into Information} \\[0.3cm]
+\large (String--Light Polarization, Polyakov--Navier--Stokes Vortex Shear and the Mechanism of Ontological Stripping in Black Holes --- Extended Complete Version)}
+\author{Fahri Meral}
+\date{October 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+As the third link of the \textit{Stationary Strings Theorem} series, this study presents the fundamental ontological and mathematical mechanism explaining how and under which dynamical forcing matter in the vibrating energy phase passes into the stationary information phase ($\omega = 0$) at the black hole event horizon. Going beyond the ``states of matter'' (solid, liquid, gas, plasma) classification of classical physics, it is proposed that existence itself is built upon two opposite and inversely proportional \textbf{fundamental existential dimensions}: the \textbf{String (Frequency) Dimension}, producing intrinsic specific energy, mass and local time, and the \textbf{Light (Photon) Dimension}, representing flow, velocity and unbounded expansion in spacetime. The material world we perceive is the intermediate phase where these two opposite dimensions touch each other under a balanced tension; when one grows, the other necessarily shrinks.
+
+In this study, this duality is first derived in the macroscopic general-relativistic framework ($\Psi_{\text{string}} \cdot \Psi_{\text{light}} = 1$), then step by step in the string's own proper time ($\tau$), independently of coordinate singularities, through the \textbf{Polyakov string action integral in curved spacetime}, the \textbf{Fluid--Gravity Correspondence} [7, 11] and the proofs of the \textbf{3-dimensional Navier--Stokes finite-time vortex singularity (finite-time blowup) from the Millennium Prize Problems}, resolved in September 2026 [12, 13]. Combining the self-similar scaling laws of the Navier--Stokes vortex solution (while the vortex velocity diverges as $|u_\theta^{(0)}| \asymp \tau^{-1/2-h} \to \infty$, the specific kinetic energy of the core vanishes as $E_{\text{core}} \asymp \tau^{1/2-3h} \to 0$, and the cross-section contracts as $\ell_r/\ell_z \asymp \tau^h \to 0$ [12]) with the traceless shear tensor ($\text{Tr}(\Sigma_{\mu\nu})=0$), it is proved that in the black hole vortex the light dimension is pulled to infinity ($\mathcal{L}_{\text{light}} \to \infty$) while the intrinsic frequency of the string converges to zero in inverse proportion ($\omega_n(\tau) \to 0$). These two extremity forces growing in opposite directions strip the material realm of its energy, \textbf{just as skin is flayed from a body}, and convert it into the pure, zero-entropy \textbf{information realm} whose topological quantum invariant ($\mathcal{I}_n = \omega_n \cdot \mathcal{L}_{\text{light}} = n c$) is conserved by the equation.
+\end{abstract}
+
+\section{Introduction and Conceptual Foundation}
+
+In the first study of the \textit{Stationary Strings Theorem} series [1], it was shown that time and entropy are secondary phenomena born from the vibration of strings ($\omega > 0$), and that at the limit where string vibration halts completely ($\omega = 0$), time, chaos and entropy disappear and the universe passes into the ``Pure Information and Perfect Order'' phase. In the second study of the series [2], this ontological principle was combined with Einstein's general theory of relativity, building a direct bridge between gravitational time dilation and string frequency:
+
+\begin{equation}
+t' = k_t \cdot f_0 \sqrt{1 - \frac{2GM}{rc^2}}
+\end{equation}
+
+This equation showed that as matter approaches the event horizon of a black hole ($r \to r_s = \frac{2GM}{c^2}$), the string frequency tends to zero ($f' \to 0$), and that black holes are not graveyards annihilating matter but cosmic phase transducers converting the ``Vibrating Energy Phase'' into the ``Stationary Information Phase'' [2].
+
+At this point, however, a much deeper mechanical and existential question arises at the heart of the theory: \textit{What inner architecture does the material world we truly know and perceive possess, such that when caught in the vortex of a black hole, while being flung toward the speed of light by infinite attraction on the one hand, it can on the other hand completely lose its own specific energy in inverse proportion and turn into pure information? How do the forces performing this transformation dissect the fabric of matter?}
+
+This third article proposes a new dimensional understanding of the nature of matter, supported by the vortex singularity mechanism of the Navier--Stokes Millennium Problem solved in September 2026 (\textit{Finite Time Blowup for Navier--Stokes} [12]):
+\begin{quote}
+``As the vortex around a black hole intensifies, velocity and attraction grow toward infinity; while this attraction pulls the light direction of matter toward infinite velocity, the string begins, through an exactly opposite process, to completely lose its own specific energy in inverse proportion. The string-state matter, slowing down to infinity from the material world we truly know and perceive, is pulled by the light state accelerating infinitely in the opposite direction; these two opposite forces strip the material realm like flaying skin and convert it into the pure information realm.''
+\end{quote}
+
+\section{Beyond the States of Matter: The Two Existential Dimensions of Matter (String--Light Duality)}
+
+\subsection{From the Concept of ``States of Matter'' to the Concept of ``Dimensions of Matter''}
+
+In classical and modern physics, matter is classified through \textbf{states (phases)} such as solid, liquid, gas, plasma or Bose--Einstein condensate according to the extrinsic energy levels of particles or fields. The concept of ``dimension'', on the other hand, has traditionally been reserved in physics only for the spatial directions ($x, y, z$) and time ($t$) in which matter moves.
+
+According to the new understanding proposed in this study, however, matter possesses not only the spatial dimensions it resides in or thermodynamic states, but \textbf{immanent (ontological) dimensions constituting the very existence of matter itself}. Matter is not a single-layered entity; it is a two-dimensional duality born from the interlocking of two dimensions of opposite character. These two dimensions are the \textbf{String (Frequency) Dimension} and the \textbf{Light (Photon) Dimension}.
+
+\subsection{First Dimension: The String (Frequency, Specific Energy and Local Time) Dimension}
+
+The first dimension of matter is the capacity for inward closure of existence, focusing at a local position, vibrating around itself or in inner space, gaining rest mass through this vibration, and producing local time ($t'$). When a fundamental string vibrates at frequency $f_0$ (angularly $\omega_0 = 2\pi f_0$), it produces its own \textbf{specific energy} and \textbf{material identity}:
+
+\begin{equation}
+E_{\text{specific,0}} = h f_0 = \hbar \omega_0 \quad \text{and} \quad m_0 = \frac{h f_0}{c^2} = \frac{\hbar \omega_0}{c^2}
+\end{equation}
+
+The string dimension represents the \textbf{locality, inertia, weight, inner time flow and structural memory} of matter. If only the string dimension existed in the universe with no extrinsic flow, existence would be trapped at absolute local points unable to move anywhere in space.
+
+\subsection{Second Dimension: The Light (Photon, Unbounded Flow and Timelessness) Dimension}
+
+The second dimension of matter is the capacity of existence to escape locality, expand boundlessly in spacetime, and turn into pure translational/kinetic motion. The pure and extreme representative of this dimension in the universe is the \textbf{photon (light)} phase.
+
+In the pure light dimension there is no intrinsic rest mass ($m_0 = 0$), no confinement to a local position, and no inner proper time flows ($d\tau = 0$). This dimension represents the \textbf{exteriority, velocity, expansion and timeless flow} of existence.
+
+\subsection{The Perceivable Material World: The Equilibrium Fabric of Two Opposite Dimensions}
+
+The ``real material world'' experienced by human senses and measuring instruments is neither a fully stationary string nor pure light. Perceivable matter is a composite fabric in which the \textbf{String Dimension} and the \textbf{Light Dimension} are stitched together, interpenetrating under a moderate cosmic tension.
+
+Since in the theory of relativity the total four-velocity vector budget ($\|U^\mu\|^2 = -c^2$) of every entity in spacetime is fixed, an absolute \textbf{law of inverse proportion and opposition} operates between these two dimensions of matter:
+\begin{itemize}
+    \item The more an entity grows and accelerates in the \textbf{Light (Photon/Velocity) Dimension}, the more its share of inner vibration in the \textbf{String (Frequency/Specific Energy) Dimension} shrinks and slows.
+    \item The more an entity condenses in the \textbf{String Dimension}, the more its extrinsic flow velocity is limited.
+    \item In short, these two dimensions are conjugates of each other: \textbf{when one increases, the other necessarily decreases.}
+\end{itemize}
+
+\section{Macroscopic Relativistic Approach: Inversely Proportional Dynamics and the $0 - \infty$ Gap}
+
+The gravitational frequency equation established in the second article [2] clearly reveals the macroscopic projection, in the outer-observer frame, of this inverse proportion between the two dimensions of matter.
+
+When a material particle enters the gravitational vortex at distance $r$ from the center of a black hole of mass $M$, the local frequency ($f'$) of the string and its local specific vibration energy ($E'_{\text{string}}$) change as:
+
+\begin{equation}
+f'(r) = f_0 \sqrt{1 - \frac{2GM}{rc^2}} \implies E'_{\text{string}}(r) = E_0 \sqrt{1 - \frac{2GM}{rc^2}}
+\end{equation}
+
+From this we may separately define the dimensionless state functions representing the behavior of the two existential dimensions of matter under the gravitational vortex:
+
+\begin{enumerate}
+    \item \textbf{String Dimension State Function ($\Psi_{\text{string}}$):} The rate at which the string preserves its own inner vibration, local time and specific energy:
+    \begin{equation}
+    \Psi_{\text{string}}(r) = \frac{f'(r)}{f_0} = \frac{E'_{\text{string}}(r)}{E_0} = \sqrt{1 - \frac{2GM}{rc^2}}
+    \end{equation}
+    \item \textbf{Light (Vortex and Acceleration) Dimension State Function ($\Psi_{\text{light}}$):} The intensity with which the gravitational vortex pulls matter toward the light-formation limit ($v \to c$), stretches spacetime and amplifies kinetic flow (gravitational Lorentz/stretch factor):
+    \begin{equation}
+    \Psi_{\text{light}}(r) = \gamma_g(r) = \frac{1}{\sqrt{1 - \frac{2GM}{rc^2}}}
+    \end{equation}
+\end{enumerate}
+
+Multiplying Equations (4) and (5) yields the \textbf{Macroscopic Conservation Law of the Two-Dimensionality of Matter}:
+
+\begin{equation}
+\Psi_{\text{string}}(r) \cdot \Psi_{\text{light}}(r) = \left( \sqrt{1 - \frac{2GM}{rc^2}} \right) \cdot \left( \frac{1}{\sqrt{1 - \frac{2GM}{rc^2}}} \right) = 1 \quad (\text{Constant})
+\end{equation}
+
+Equation (6) is the macroscopic foundation of the mentally constructed principle \textit{``while one goes to infinity, the other collapses to zero in inverse proportion''}:
+\begin{itemize}
+    \item As matter approaches the event horizon of the black hole ($r \to r_s = \frac{2GM}{c^2}$), the gravitational vortex tends to infinity and the \textbf{Light Dimension diverges to infinity}:
+    \[
+    \lim_{r \to r_s} \Psi_{\text{light}}(r) = \infty
+    \]
+    \item At the same time, since the product of the two dimensions must stay constant ($1$), the \textbf{String Dimension collapses to zero in inverse proportion} and completely loses its own specific energy:
+    \[
+    \lim_{r \to r_s} \Psi_{\text{string}}(r) = 0 \implies E'_{\text{string}} \to 0, \quad \omega' \to 0
+    \]
+\end{itemize}
+
+\subsection{The Coordinate-Time Objection and the Need for Micro-Physical Proof}
+
+In classical general relativity, the vanishing of the Schwarzschild factor ($\sqrt{1 - r_s/r}$) in Equation (4) at the event horizon is interpreted, for zero-dimensional \textit{point particles}, merely as an appearance tied to the coordinate time ($t$) of an observer standing far from the black hole; a freely falling point particle is assumed to feel no special change at the event horizon in its own proper time ($\tau$).
+
+This classical assumption, however, does not hold for \textbf{extended strings} and \textbf{vortex singularities}! For a string is not a point particle but a nonlocal fabric with length in space; hence it directly feels, in its own proper time ($\tau$), the shear force produced by the vortex. We will now prove, with the September 2026 Navier--Stokes Millennium Problem solution [12] and the Polyakov string integral [8, 16], that this separation is not an observer illusion but a real physical stripping occurring in the string's own proper time.
+
+\section{Mathematical Foundation: The September 2026 Navier--Stokes Millennium Solution and Fluid--Gravity Duality}
+
+\subsection{The September 2026 Navier--Stokes Vortex Singularity (Vortex Blow-up) Proof and Scaling Laws}
+
+The ``existence and smoothness of the three-dimensional incompressible Navier--Stokes equations'' problem, unsolved for nearly a century and declared one of the seven \textit{Millennium Prize Problems} by the Clay Mathematics Institute (Fefferman [13]), was resolved in September 2026 by the 166-page \textit{Finite Time Blowup for Navier--Stokes} study [12], formally verified with the Lean theorem prover (see [14, 15] for concurrent studies).
+
+The incompressible Navier--Stokes equations are [12, p.\ 1]:
+
+\begin{equation}
+\partial_t u + (u \cdot \nabla)u - \nu \Delta u + \nabla p = f, \qquad \nabla \cdot u = 0
+\end{equation}
+
+In the main result of the article, \textbf{Theorem 1.1} [12, p.\ 1], it is proved that for every positive viscosity $\nu > 0$, a smooth fluid initially at rest ($u(\cdot, 0) = 0$) and with finite total kinetic energy at all times ($\sup_{0 \le t < 1} \|u(t)\|_{L^2(\mathbb{R}^3)} < \infty$) forms an axisymmetric \textbf{vortex} collapsing in a spiral into itself, and that at the singularity moment $t \uparrow 1$ the velocity at the tip \textbf{grows without bound to infinity ($\infty$)}:
+
+\begin{equation}
+\limsup_{t \uparrow 1} \|u(t)\|_{L^\infty(\mathbb{R}^3)} = \infty
+\end{equation}
+
+The inner-core mathematics presented in \textbf{Section 2.1 (Inner core)} [12, pp.\ 3--4] and \textbf{Section 3.1 (Leading inner-core system)} [12, pp.\ 7--8] of this proof mathematically confirms one-to-one the mechanism intuitively predicted in the \textit{Stationary Strings Theorem}, namely \textit{``while vortex and velocity go to infinity, the inner string completely loses its own specific energy in inverse proportion''}.
+
+With self-similar time remaining to singularity $\tau = 1 - t \to 0$ and small positive parameter $0 < h < \frac{1}{100}$, two conjugate scaling exponents governing the two-directional behavior of the vortex and summing to $1$ are defined in the solution [12, pp.\ 7, 20]:
+
+\begin{equation}
+\begin{split}
+A &= \frac{1}{2} + h \quad (\text{Azimuthal velocity growth exponent}), \\
+D &= \frac{1}{2} - h \quad (\text{Axial scale exponent}), \qquad A + D = 1
+\end{split}
+\end{equation}
+
+Under this scaling, four critical events occur simultaneously in the vortex core:
+
+\begin{enumerate}
+    \item \textbf{Divergence of Vortex Velocity and Rotation Intensity to Infinity ($\to \infty$):} As the vortex narrows toward the center, by conservation of angular momentum and vortex stretching, the azimuthal (rotation) velocity $|u_\theta^{(0)}|$, the axial velocity $|u_z^{(0)}|$ and the angular Reynolds number $\text{Re}_\theta$ \textbf{diverge to infinity} in finite time [12, pp.\ 4, 8]:
+    \begin{equation}
+    \begin{split}
+    |u_\theta^{(0)}|, \, |u_z^{(0)}| &\asymp \tau^{-A} = \tau^{-1/2 - h} \xrightarrow{\tau \to 0} \infty, \\
+    \text{Re}_\theta &:= \frac{|u_\theta|\ell_r}{\nu} \asymp \tau^{-h} \xrightarrow{\tau \to 0} \infty
+    \end{split}
+    \end{equation}
+
+    \item \textbf{Inverse-Proportional Nulling of the Specific Kinetic Energy of the Core ($\to 0$):} Despite velocities going to infinity, since the volume of the core contracts as $\ell_r^2 \ell_z \asymp \tau^{3/2 - h}$, the total kinetic energy inside the vortex core itself ($\int_{\text{core}} |u|^2 dx$) \textbf{drops completely to zero} by an oppositely directed power law [12, p.\ 4]:
+    \begin{equation}
+    E_{\text{core}}(\tau) \asymp \left(\tau^{-1/2-h}\right)^2 \cdot \tau^{3/2-h} = \tau^{1/2 - 3h} \xrightarrow{\tau \to 0} 0 \qquad \left(0 < h < \frac{1}{100}\right)
+    \end{equation}
+    This equation is the direct mathematical form of the statement \textit{``The total kinetic energy of the core is of order $\tau^{1/2-3h}$, which tends to zero despite the increasing speeds''} [12, p.\ 4] in the article, and is the proof that the string completely loses its own specific energy inside the vortex.
+
+    \item \textbf{Oppositely Directed Compression--Stretch Duality ($\tau^{+h} \cdot \tau^{-h} = 1$):} By the incompressibility law ($\nabla \cdot u = 0$), a fluid compressed in one direction is necessarily stretched in the other [12, p.\ 2]. Since the radial radius of the vortex core is $\ell_r \asymp \tau^{1/2}$ and its axial length is $\ell_z \asymp \tau^{D} = \tau^{1/2-h}$ [12, pp.\ 4, 8], the horizontal/vertical contraction ratio goes to zero while the axial stretch ratio goes to infinity in inverse proportion:
+    \begin{equation}
+    \begin{split}
+    \frac{\ell_r}{\ell_z} &\asymp \frac{\|u_r^{(0)}\|}{\|u_\theta^{(0)}\|} \asymp \tau^{+h} \xrightarrow{\tau \to 0} 0, \\
+    \frac{\ell_z}{\ell_r} &\asymp \text{Re}_\theta \asymp \tau^{-h} \xrightarrow{\tau \to 0} \infty
+    \end{split}
+    \end{equation}
+    The product of these two inversely proportional scales is constant at all times:
+    \begin{equation}
+    \left(\tau^{+h}\right) \cdot \left(\tau^{-h}\right) = 1
+    \end{equation}
+
+    \item \textbf{Collapse of the Continuous Material Fabric (Continuum Breakdown):} As emphasized in the solution, the divergence of velocity to infinity physically marks the breaking of the ``continuous material medium (continuum)'' fabric and the phase boundary at which the system separates into singular quantum/information components [12].
+\end{enumerate}
+
+\subsection{Fluid--Gravity Correspondence and\\ the Eddington--Finkelstein Vortex Metric}
+
+The direct applicability of this proof in fluid dynamics to black holes rests on the proven \textbf{Fluid/Gravity Correspondence} theorem of modern theoretical physics (Bhattacharyya et al.\ [11]) and the \textbf{Black Hole Membrane Paradigm} (Thorne et al.\ [7]). According to these theorems, the Einstein field equations ($G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$) projected onto the event horizon of a black hole reduce one-to-one to relativistic Navier--Stokes vortex equations.
+
+Passing to the infalling Eddington--Finkelstein (light-cone) coordinates $(v, r, x^i)$ ($v = ct + r^*$), which are regular at the event horizon to completely eliminate coordinate singularities, the spacetime metric $g_{\mu\nu}$ near the horizon of a rotating and collapsing black hole directly contains the \textbf{shear tensor ($\Sigma_{\mu\nu}$)} of the relativistic Navier--Stokes vortex [11]:
+
+\begin{equation}
+ds^2 = -2 u_\mu dx^\mu dr + r^2 \left( P_{\mu\nu} + 2 \tau_{\text{vortex}} \, \Sigma_{\mu\nu} \right) dx^\mu dx^\nu
+\end{equation}
+
+Here $u^\mu$ is the four-velocity field of the vortex, $P_{\mu\nu} = g_{\mu\nu} + u_\mu u_\nu$ the orthogonal projection tensor, and $\Sigma_{\mu\nu}$ the vortex shear tensor:
+
+\begin{equation}
+\Sigma_{\mu\nu} = \frac{1}{2} P_\mu^\alpha P_\nu^\beta \left( \nabla_\alpha u_\beta + \nabla_\beta u_\alpha \right) - \frac{1}{d-1} P_{\mu\nu} (\nabla_\alpha u^\alpha)
+\end{equation}
+
+In incompressible vortex flow ($\nabla_\alpha u^\alpha = 0$) the shear tensor is mathematically \textbf{traceless} ($\text{Tr}(\Sigma_{ij}) = \Sigma^i_i = 0$). Since the sum of eigenvalues of a traceless matrix must be zero, as the Navier--Stokes vortex singularity ($\tau \to 0$) is approached, the shear tensor stretches the spacetime fabric hyperbolically with two eigenvalues equal in magnitude but \textbf{opposite in sign} ($+\Lambda(\tau)$ and $-\Lambda(\tau)$) on two perpendicular axes.
+
+Consistently with the Navier--Stokes scaling of Equations (12) and (13) ($\Phi(\tau) = \int \Lambda(\tau') d\tau' = h \ln(1/\tau) \to \infty$), the effective transverse spacetime deformation metric $g_{ij}(\tau)$ felt by the string takes the following diagonal form:
+
+\begin{equation}
+g_{ij}(\tau) = \begin{pmatrix} e^{+2\Phi(\tau)} & 0 \\ 0 & e^{-2\Phi(\tau)} \end{pmatrix} = \begin{pmatrix} \tau^{-2h} & 0 \\ 0 & \tau^{+2h} \end{pmatrix}, \qquad \det(g_{ij}) = e^{+2\Phi(\tau)} \cdot e^{-2\Phi(\tau)} = 1
+\end{equation}
+
+\section{Variational Derivation: Polyakov String Action Integral and Separation in Proper Time ($\tau$)}
+
+\subsection{Polyakov Action Integral in Curved Spacetime and Virasoro Constraints}
+
+Unlike a zero-dimensional point particle, a string is a one-dimensional extended object in space parametrized by $\sigma \in [0, \pi]$ ($\partial_\sigma X^\mu \neq 0$). Hence the string directly feels, within its worldsheet proper time $\tau$, the hyperbolic shear produced by the vortex metric of Equation (16).
+
+The full dynamics of a string moving in curved spacetime ($g_{\mu\nu}(X)$) is defined by the \textbf{Polyakov action integral ($S_P$)} [8, 16]:
+
+\begin{equation}
+S_P = -\frac{T_0}{2} \int d\tau \, d\sigma \sqrt{-\gamma} \, \gamma^{ab} \, g_{\mu\nu}(X) \, \partial_a X^\mu \partial_b X^\nu
+\end{equation}
+
+Here $T_0 = \frac{1}{2\pi\alpha'}$ is the fundamental string tension, $\xi^a = (\tau, \sigma)$ the intrinsic worldsheet coordinates of the string, and $\gamma_{ab}$ the worldsheet inner metric. When the variational derivative of the action integral with respect to the $\gamma^{ab}$ metric is set to zero ($\frac{\delta S_P}{\delta \gamma^{ab}} = 0$), the worldsheet energy-momentum tensor of the string $T_{ab} = 0$ (Virasoro constraint equation) is obtained. Under conformal gauge ($\gamma_{ab} = \eta_{ab} = \text{diag}(-1, +1)$), the $T_{\tau\tau} = 0$ constraint takes the following explicit form:
+
+\begin{equation}
+T_{\tau\tau} = \frac{T_0}{2} g_{\mu\nu}(X) \left( \frac{\partial X^\mu}{\partial \tau} \frac{\partial X^\nu}{\partial \tau} + \frac{\partial X^\mu}{\partial \sigma} \frac{\partial X^\nu}{\partial \sigma} \right) = 0
+\end{equation}
+
+Equation (18) is the direct mathematical proof, born from the variational integral, of the \textbf{``Two Existential Dimensions of Matter''} proposition conceptually established in Section 2 of this study:
+\begin{enumerate}
+    \item \textbf{First Term ($\partial_\tau X^\mu = \dot{X}^\mu$):} The \textbf{Light / Photon / Kinetic Mode} of the string flowing in spacetime.
+    \item \textbf{Second Term ($\partial_\sigma X^\mu = X'^\mu$):} The tension over its own spatial fabric and the \textbf{Intrinsic Frequency / Vibration Mode}.
+\end{enumerate}
+
+That the sum of these two terms is locked to zero ($T_{\tau\tau} = 0$) proves that the string dimension and the light dimension share the same total existence budget, and that as one grows the other necessarily shrinks.
+
+\subsection{Harmonic Mode Expansion in the Vortex Metric and Freezing in Proper Time ($\omega_n \to 0$)}
+
+Now let us solve step by step how the two dimensions of the string separate as it approaches the vortex singularity ($\tau \to 0$), by inserting the Navier--Stokes hyperbolic vortex metric of Equation (16) into the Polyakov action integral of Equation (17):
+
+\subsubsection{Infinite Stretching of the Light Dimension ($\mathcal{L}_{\text{light}} \to \infty$)}
+For the string component extending along the expanding stretch axis of the vortex ($g_{\parallel} = e^{+2\Phi(\tau)} = \tau^{-2h}$), the physical propagation length $\mathcal{L}_{\text{light}}(\tau)$ is found by integrating the metric element along the string:
+
+\begin{equation}
+\mathcal{L}_{\text{light}}(\tau) = \int_0^\pi d\sigma \sqrt{g_{\parallel}(\tau) \left(\frac{\partial X^\parallel}{\partial \sigma}\right)^2} = \ell_0 \, e^{+\Phi(\tau)} = \ell_0 \, \tau^{-h} \xrightarrow{\tau \to 0} \infty
+\end{equation}
+
+As seen, while approaching the vortex singularity ($\tau \to 0$), the extrinsic \textbf{Light Dimension} of matter stretches exponentially to infinity and to the light-cone boundary [8, 12].
+
+\subsubsection{Nulling of the String Dimension in Proper Time ($\omega_n(\tau) \to 0$)}
+Let us expand the transverse coordinate representing the inner vibrations of the string into Fourier harmonic modes:
+
+\begin{equation}
+X^\perp(\tau, \sigma) = \sum_{n=1}^{\infty} q_n(\tau) \sin(n \sigma)
+\end{equation}
+
+Here $n \in \{1, 2, 3, \dots\}$ is the \textbf{topological/quantum harmonic mode number} of the string, and $q_n(\tau)$ the time-dependent oscillation amplitude of the $n$-th mode. When this expansion is inserted into the Polyakov action integral and integrated over $\sigma \in [0, \pi]$, the effective Lagrangian $L_n$ and canonical momentum $p_n = \frac{\partial L_n}{\partial \dot{q}_n}$ are obtained for each $n$ mode.
+
+Under the hyperbolic shear of the vortex and the contracting metric eigenvalue ($e^{-2\Phi(\tau)} = \tau^{+2h}$), the Euler--Lagrange equation of motion of the $q_n(\tau)$ amplitude ($\frac{d}{d\tau}\frac{\partial L_n}{\partial \dot{q}_n} - \frac{\partial L_n}{\partial q_n} = 0$) turns into the following time-dependent harmonic oscillator equation:
+
+\begin{equation}
+\ddot{q}_n(\tau) + \omega_n^2(\tau) \, q_n(\tau) = 0
+\end{equation}
+
+Here the \textbf{effective intrinsic vibration frequency $\omega_n(\tau)$ of the string in its own proper time ($\tau$)} is the product of the initial wavenumber $k_n = \frac{n}{\ell_0}$ and the contraction factor of the vortex:
+
+\begin{equation}
+\omega_n(\tau) = \left( \frac{n c}{\ell_0} \right) e^{-\Phi(\tau)} = \omega_{n,0} \, e^{-\Phi(\tau)} = \omega_{n,0} \, \tau^{+h} \xrightarrow{\tau \to 0} 0
+\end{equation}
+
+Equation (22) is the most critical micro-physical proof of the \textit{Stationary Strings Theorem}:
+\begin{itemize}
+    \item The nulling of the vibration frequency of the string ($\omega_n(\tau) \to 0$) is \textbf{not} an optical illusion stemming from the clock of a distant observer!
+    \item It is a \textbf{real inner freezing and specific-energy loss} occurring directly in the string's own proper time ($\tau$), through exactly the same physical mechanism as the nulling of the kinetic energy of the Navier--Stokes vortex core ($E_{\text{core}} \asymp \tau^{1/2-3h} \to 0$ [12, p.\ 4]):
+    \begin{equation}
+    E_{\text{string}, n}(\tau) = \hbar \, \omega_n(\tau) = \hbar \, \omega_{n,0} \, \tau^{+h} \xrightarrow{\tau \to 0} 0
+    \end{equation}
+\end{itemize}
+
+\subsection{Topological Information Conservation Law ($\mathcal{I}_n = n c$)}
+
+Now let us multiply the infinitely stretched \textbf{Light Dimension ($\mathcal{L}_{\text{light}}(\tau)$)} of Equation (19) with the \textbf{String Frequency Dimension ($\omega_n(\tau)$)} collapsing to zero of Equation (22):
+
+\begin{equation}
+\begin{split}
+\mathcal{I}_n &= \omega_n(\tau) \cdot \mathcal{L}_{\text{light}}(\tau) \\
+&= \left( \frac{n c}{\ell_0} \, e^{-\Phi(\tau)} \right) \cdot \left( \ell_0 \, e^{+\Phi(\tau)} \right) = \left( \omega_{n,0} \, \tau^{+h} \right) \cdot \left( \ell_0 \, \tau^{-h} \right) = n c = \text{Constant!}
+\end{split}
+\end{equation}
+
+Equation (24) is not a simple square-root identity, but an absolute physical law born directly from the volume conservation of the traceless vortex tensor ($\text{Tr}(\Sigma_{ij}) = 0 \implies \det(g_{ij}) = 1$) and the \textbf{Liouville Phase Space Conservation / Adiabatic Invariance} theorem of Hamiltonian mechanics.
+
+Noting the $n c$ expression on the right-hand side of this equation reveals an extraordinary result: even if the vibration of the string halts completely at the vortex singularity ($\omega_n(\tau) \to 0$), and even if the string completely loses its own specific energy ($E_{\text{string}, n} \to 0$), the \textbf{$n$ quantum/topological mode number} on the right-hand side of the equation is conserved independently of time! This $n$ number, never erased even at the $\omega_n = 0$ moment, is the exact mathematical counterpart of the \textbf{Pure Information (the informational DNA of the universe)} remaining after the energy envelope of matter is stripped.
+
+\section{``Ontological Stripping'' in the Black Hole Vortex: Flaying the Material Realm Like Skin}
+
+The mathematical derivations above transform the initial intuitive proposition of this study into a complete physical mechanism. When matter is caught in the vortex around a black hole, it does not undergo ordinary mechanical crushing; on the contrary, it undergoes \textbf{dimensional shear and ontological stripping}.
+
+\subsection{Shear Effect of Two Opposite Forces: Forward Pull and Backward Pull}
+
+As the vortex deepens ($\tau \to 0$, $r \to r_s$), attraction and swirl grow toward infinity, forming a cosmic shear pulling the fabric of matter toward two opposite poles:
+
+\begin{itemize}
+    \item \textbf{Forward Pull (Infinite Acceleration of the Light Dimension):} The black hole vortex and Navier--Stokes vortex stretching ($|u_\theta| \asymp \tau^{-1/2-h} \to \infty$) pull the extrinsic/flow direction of matter toward infinite velocity ($v \to c$) and infinite spatial stretching ($\mathcal{L}_{\text{light}} \asymp \tau^{-h} \to \infty$, $\Psi_{\text{light}} \to \infty$). Matter is flung at its outer layer to the pure light-formation (photonization) limit.
+    \item \textbf{Backward Pull (Infinite Slowing and Energy Loss of the String Dimension):} At the same time, under the conjugate contraction axis of the vortex, the string begins to completely lose its own inner vibration and specific energy in inverse proportion ($\omega_n(\tau) \asymp \tau^{+h} \to 0$, $E_{\text{core}} \asymp \tau^{1/2-3h} \to 0$, $\Psi_{\text{string}} \to 0$). Matter in the string state, detached from the material world we truly know and perceive, is pulled toward absolute stationarity with infinite deceleration.
+\end{itemize}
+
+\subsection{Transformation of the Fabric of Matter into the Information Realm by ``Flaying Like Skin''}
+
+Since the material world we perceive is a fabric in which the string dimension and the light dimension are stitched together, these two extremity forces, one going to infinity ($\infty$) and the other to zero ($0$) in opposite directions, \textbf{strip the material realm apart like flaying skin from a body}:
+
+\begin{equation}
+\begin{split}
+&\text{Matter Fabric } (\Psi_{\text{string}} \otimes \Psi_{\text{light}}) \\
+&\xrightarrow[\tau \to 0]{r \to r_s} \underbrace{\mathcal{L}_{\text{light}}(\tau) \to \infty}_{\text{Stripped Light/Energy Shell}} + \underbrace{\omega_n(\tau) \to 0 \ (\mathcal{I}_n = n c)}_{\text{Pure Information Core (Stationary String)}}
+\end{split}
+\end{equation}
+
+When this ``ontological stripping'' is complete:
+\begin{enumerate}
+    \item The extrinsic, noisy, chaotic and entropy-producing ``light/motion skin'' of matter is stripped from the body under the infinite tension of the vortex.
+    \item The string remaining inside passes into the \textbf{Stationary String} phase, having completely discharged its own specific kinetic energy ($E_{\text{string}} \to 0$), nullified its vibration ($\omega_n = 0$), and exited time and entropy.
+    \item This stationary string, stripped of its specific energy, is no longer ``matter''; it is \textbf{pure information} preserving the entire existential history of matter in the conserved $n$ topological quantum invariant ($\mathcal{I}_n = n c$) [1, 2, 10].
+\end{enumerate}
+
+\section{Philosophical and Ontological Interpretation: Dissolution of the Fabric, Limits of Perception and the Information Realm}
+
+The human mind, senses and classical physics instruments have evolved to perceive only the ``woven'' state --- the \textbf{continuous material world} --- in which two opposite dimensions (string and light) collide to produce a moderate tension. What we call ``reality'' is actually a transient friction and tension surface between the inner resistance of the string and the outer flow of light.
+
+As mathematically proved by the September 2026 Navier--Stokes Millennium Problem solution as well, when velocity reaches infinity at the tip of the vortex, the ``continuous medium (material fabric)'' model collapses [12]. Black holes are the cosmic looms unravelling this transient material weave of the universe stitch by stitch:
+
+\[
+\begin{aligned}
+&\text{Material Realm (String + Light Fabric)} \\
+&\xrightarrow{\text{Dimensional Shear (Stripping)}} \text{Information Realm (Stationary Perfection)}
+\end{aligned}
+\]
+
+The ``skin-like'' flaying of the material realm is not annihilation or chaos; on the contrary, it is the removal of the noisy energy veil over existence. Energy is the moving shadow of information in spacetime; when the vortex strips away this shadow at infinite speed, what emerges is the \textbf{Information Realm (Perfection Dimension)} --- the immutable, timeless, zero-entropy essence of the universe.
+
+\section{Cosmological Integrity and Conclusion}
+
+With this third and extended study, the three-stage architecture of the theory is completed at both the philosophical-conceptual and the variational-mathematical level:
+
+\begin{itemize}
+    \item \textbf{Ontological Foundation (Theorem I [1]):} Time and entropy are consequences of string vibration; when vibration halts ($\omega = 0$), time and entropy vanish and perfect order (pure information phase) begins.
+    \item \textbf{Relativity Bridge (Theorem II [2]):} Gravitational time dilation and string frequency obey the same law ($t' = k_t \cdot f_0 \sqrt{1 - \frac{2GM}{rc^2}}$); black holes are phase transducers converting energy into information.
+    \item \textbf{Two-Dimensional Duality and Vortex Stripping Mechanism (Theorem III):} Matter consists of two inversely proportional existential dimensions, \textbf{String (Frequency/Specific Energy)} and \textbf{Light (Photon/Flow)} ($\Psi_{\text{string}} \cdot \Psi_{\text{light}} = 1$). In the black hole vortex, per the Navier--Stokes vortex singularity laws [12] and the Polyakov action integral, the traceless shear tensor ($\text{Tr}(\Sigma_{\mu\nu})=0$) pulls the light dimension of matter to infinity ($\mathcal{L}_{\text{light}} \asymp \tau^{-h} \to \infty$) while reducing the frequency and specific energy of the string dimension to zero in proper time ($\omega_n \asymp \tau^{+h} \to 0$, $E_{\text{core}} \asymp \tau^{1/2-3h} \to 0$). These two opposite forces strip the material realm like flaying skin, converting it into the topological information invariant ($\mathcal{I}_n = \omega_n \cdot \mathcal{L}_{\text{light}} = n c$).
+\end{itemize}
+
+This result also directly constitutes the theoretical ground of the fourth study of the series (the use of the stripped light shell in the vortex as cosmic fuel, and the elimination of the $r=0$ singularity at the black hole center by the stationary string core).
+
+\begin{quote}
+\textit{``Matter is a transient veil where light and string cling to each other;\\
+when the vortex strips the veil, only the silence of infinite information remains.''}\\
+--- Fahri Meral, Stationary Strings Theorem III (2026)
+\end{quote}
+
+\section*{References}
+
+\begin{enumerate}
+    \item Meral, F. (2025a). \textit{Duran Sicimler Teoremi: Zamanın ve Entropinin Yokluğunda Mükemmel Düzenin Yeniden Doğuşu}.
+    \item Meral, F. (2025b). \textit{Duran Sicimler Teoremi: Görelilik, Faz Dönüşümü ve Bilginin Kozmolojik Döngüsü (Görelilik ve Duran Sicimler Arasındaki Köprü – Genişletilmiş Versiyon)}.
+    \item Einstein, A. (1916). \textit{Die Grundlage der allgemeinen Relativitätstheorie}. Annalen der Physik, 49, 769–822.
+    \item Schwarzschild, K. (1916). \textit{Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie}. Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften.
+    \item Bekenstein, J. D. (1973). \textit{Black holes and entropy}. Physical Review D, 7(8), 2333–2346.
+    \item Hawking, S. W. (1974). \textit{Black hole explosions?} Nature, 248(5443), 30–31.
+    \item Thorne, K. S., Price, R. H., \& Macdonald, D. A. (1986). \textit{Black Holes: The Membrane Paradigm}. Yale University Press. (Black hole horizon and vortex dynamics equivalence)
+    \item Susskind, L. (1993). \textit{Strings, black holes and Lorentz contraction}. Physical Review D, 49(12), 6606–6611.
+    \item ’t Hooft, G. (1993). \textit{Dimensional reduction in quantum gravity}. arXiv:gr-qc/9310026. (Holographic principle)
+    \item Wheeler, J. A. (1990). \textit{Information, Physics, Quantum: The Search for Links}. In W. H. Zurek (Ed.), \textit{Complexity, Entropy, and the Physics of Information} (pp. 1–28). Addison-Wesley. (``It from bit'' --- the from-information-to-being approach)
+    \item Bhattacharyya, S., Hubeny, V. E., Minwalla, S., \& Rangamani, M. (2008). \textit{Nonlinear Fluid Dynamics from Gravity}. Journal of High Energy Physics, 2008(02), 045. (Fluid--Gravity Correspondence theorem)
+    \item OpenAI. (2026, September). \textit{Finite Time Blowup for Navier--Stokes}. 166 pp.\ (Millennium Prize Problem solution: Theorem 1.1, Section 2.1 and Section 3.1 vortex singularity scaling laws and core energy nulling proof). Available at: \url{https://openai.com/tr-TR/index/navier-stokes-solution/}
+    \item Fefferman, C. L. (2000). \textit{Existence and smoothness of the Navier--Stokes equation}. Clay Mathematics Institute, Millennium Prize Problem statement. \url{https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf}
+    \item Córdoba, D., Martínez-Zoroa, L., \& Zheng, F. (2026). \textit{Finite time blow-up for the hypodissipative Navier--Stokes equations with a force in $L_t^1 C_x^{1,\epsilon} \cap L_t^\infty L_x^2$}. Archive for Rational Mechanics and Analysis, 250, 38.
+    \item Buckmaster, T., \& Alpöge, L. (2026, September). \textit{Finite-time singularities for the 3D incompressible Euler, Boussinesq, and porous media equations with smooth forcing}. Courant Institute of Mathematical Sciences, New York University.
+    \item Polchinski, J. (1998). \textit{String Theory, Vol. 1: An Introduction to the Bosonic String}. Cambridge University Press. (Polyakov action integral and worldsheet constraints)
+\end{enumerate}
+
+\end{document}
