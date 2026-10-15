@@ -39,7 +39,7 @@ pdflatex -interaction=nonstopmode duran_sicimler_teoremi_III_EN.tex
   title  = {Duran Sicimler Teoremi III: Maddenin İki Boyutlu İkizliği, Girdap Tekilliği ve Bilgiye Faz Ayrışması},
   year   = {2026},
   doi    = {10.5281/zenodo.YYYYYYY},
-  url    = {https://github.com/fahrim/duran-sicimler-III}
+  url    = {https://github.com/fahrim/stationary-strings-iii}
 }
 ```
 
