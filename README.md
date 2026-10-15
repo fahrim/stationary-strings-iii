@@ -1,29 +1,32 @@
-# Duran Sicimler Teoremi III: Maddenin İki Boyutlu İkizliği, Girdap Tekilliği ve Bilgiye Faz Ayrışması
+# Stationary Strings Theorem III: The Two-Dimensional Duality of Matter, Vortex Singularity and Phase Separation into Information
+
+> **Türkçe:** [README_TR.md](./README_TR.md)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.YYYYYYY.svg)](https://doi.org/10.5281/zenodo.YYYYYYY)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> **Durum:** Yayımlanmamış ön-baskı (preprint, v1, Ekim 2026; genişletilmiş tam sürüm). Hakem denetiminden geçmemiştir.
+> **Status:** Unpublished preprint (v1, October 2026; extended complete version). Not peer-reviewed.
 
-Serinin üçüncü halkası: maddenin Sicim (Frekans) ve Işık (Foton) olmak üzere ters orantılı iki varoluşsal boyutu
-($\Psi_{\text{sicim}} \cdot \Psi_{\text{ışık}} = 1$); Polyakov eylem integrali ve Navier–Stokes girdap tekilliği
-ölçekleme yasalarıyla kara delik girdabında ontolojik soyulma; topolojik bilgi değişmezi
-($\mathcal{I}_n = \omega_n \cdot \mathcal{L}_{\text{ışık}} = n c$). Makale Türkçe + İngilizce mevcuttur.
+Third link of the series: the two inversely proportional existential dimensions of matter,
+String (Frequency) and Light (Photon) ($\Psi_{\text{string}} \cdot \Psi_{\text{light}} = 1$);
+ontological stripping in the black hole vortex via the Polyakov action integral and
+Navier–Stokes vortex singularity scaling laws; topological information invariant
+($\mathcal{I}_n = \omega_n \cdot \mathcal{L}_{\text{light}} = n c$). Paper available in Turkish and English.
 
-## Repo yapısı
+## Repository layout
 
 ```
 .
 ├── paper/
-│   ├── duran_sicimler_teoremi_III.tex      # Makale kaynağı (Türkçe)
-│   ├── duran_sicimler_teoremi_III.pdf     # Derlenmiş makale, TR (15 sayfa)
-│   ├── duran_sicimler_teoremi_III_EN.tex  # Makale kaynağı (İngilizce)
-│   └── duran_sicimler_teoremi_III_EN.pdf  # Derlenmiş makale, EN (16 sayfa)
+│   ├── duran_sicimler_teoremi_III.tex      # Paper source (Turkish)
+│   ├── duran_sicimler_teoremi_III.pdf     # Compiled paper, TR (15 pages)
+│   ├── duran_sicimler_teoremi_III_EN.tex  # Paper source (English)
+│   └── duran_sicimler_teoremi_III_EN.pdf  # Compiled paper, EN (16 pages)
 ├── CITATION.cff
 └── LICENSE
 ```
 
-## Derleme
+## Compiling
 
 ```bash
 cd paper
@@ -31,18 +34,18 @@ pdflatex -interaction=nonstopmode duran_sicimler_teoremi_III.tex
 pdflatex -interaction=nonstopmode duran_sicimler_teoremi_III_EN.tex
 ```
 
-## Atıf
+## Citation
 
 ```bibtex
 @misc{meral2026duranIII,
   author = {Fahri Meral},
-  title  = {Duran Sicimler Teoremi III: Maddenin İki Boyutlu İkizliği, Girdap Tekilliği ve Bilgiye Faz Ayrışması},
+  title  = {Stationary Strings Theorem III: The Two-Dimensional Duality of Matter, Vortex Singularity and Phase Separation into Information},
   year   = {2026},
   doi    = {10.5281/zenodo.YYYYYYY},
   url    = {https://github.com/fahrim/stationary-strings-iii}
 }
 ```
 
-## Lisans
+## License
 
-Makale metni (TR + EN): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Fahri Meral (2026).
+Paper text (TR + EN): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Fahri Meral (2026).
