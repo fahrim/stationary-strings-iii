@@ -1,17 +1,15 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{setspace}
 \usepackage{url}
 
-% babel-turkish asilmasina karsi dogrudan Turkce tanimlar:
-\renewcommand{\abstractname}{Özet}
-\renewcommand{\refname}{Kaynakça}
-
 \onehalfspacing
-\setlength{\emergencystretch}{3em}
 
 \title{\textbf{Duran Sicimler Teoremi III: Maddenin İki Boyutlu İkizliği, Girdap Tekilliği ve Bilgiye Faz Ayrışması} \\[0.3cm]
 \large (Sicim--Işık Kutuplaşması, Polyakov--Navier--Stokes Girdap Makaslaması ve Kara Deliklerde Ontolojik Soyulma Mekanizması — Genişletilmiş Tam Sürüm)}
@@ -19,6 +17,7 @@
 \date{Ekim 2026}
 
 \begin{document}
+\shorthandoff{=}
 
 \maketitle
 
@@ -201,7 +200,9 @@ Burada $u^\mu$ girdabın dört-hız alanı, $P_{\mu\nu} = g_{\mu\nu} + u_\mu u_\
 
 Sıkıştırılamaz girdap akışında ($\nabla_\alpha u^\alpha = 0$) makaslama tensörü matematiksel olarak \textbf{izsizdir} ($\text{Tr}(\Sigma_{ij}) = \Sigma^i_i = 0$). İzsiz bir matrisin özdeğerlerinin toplamı sıfır olmak zorunda olduğundan, Navier--Stokes girdap tekilliğine ($\tau \to 0$) yaklaşılırken makaslama tensörü uzay-zaman dokusunu iki dik eksende büyüklükçe eşit fakat \textbf{zıt işaretli} iki özdeğerle ($+\Lambda(\tau)$ ve $-\Lambda(\tau)$) hiperbolik olarak gerer. 
 
-Denklem (12) ve (13)'teki Navier--Stokes ölçeklemesiyle ($\Phi(\tau) = \int \Lambda(\tau') d\tau' = h \ln(1/\tau) \to \infty$) uyumlu olarak, sicimin hissettiği etkin enine uzay-zaman deformasyon metriği $g_{ij}(\tau)$ şu diyagonal formu alır:
+{\sloppy
+Denklem (12) ve (13)'teki Navier--Stokes ölçeklemesiyle ($\Phi(\tau) = \int \Lambda(\tau') d\tau'$ $= h \ln(1/\tau) \to \infty$) uyumlu olarak, sicimin hissettiği etkin enine uzay-zaman deformasyon metriği $g_{ij}(\tau)$ şu diyagonal formu alır:
+\par}
 
 \begin{equation}
 g_{ij}(\tau) = \begin{pmatrix} e^{+2\Phi(\tau)} & 0 \\ 0 & e^{-2\Phi(\tau)} \end{pmatrix} = \begin{pmatrix} \tau^{-2h} & 0 \\ 0 & \tau^{+2h} \end{pmatrix}, \qquad \det(g_{ij}) = e^{+2\Phi(\tau)} \cdot e^{-2\Phi(\tau)} = 1
@@ -288,7 +289,7 @@ Denklem (24), basit bir karekök özdeşliği değil; doğrudan izsiz girdap ten
 
 Bu denklemin sağ tarafındaki $n c$ ifadesine dikkat edildiğinde olağanüstü bir sonuç görülür: Girdap tekilliğinde sicimin titreşimi tamamen dursa bile ($\omega_n(\tau) \to 0$) ve sicim kendi özgül enerjisini tamamen yitirse bile ($E_{\text{sicim}, n} \to 0$), denklemin sağ tarafındaki \textbf{$n$ kuantum/topolojik mod sayısı} zamandan bağımsız olarak korunmaktadır! İşte $\omega_n = 0$ anında bile asla silinmeyen bu $n$ sayısı, maddenin enerji örtüsü soyulduktan sonra geriye kalan \textbf{Saf Bilginin (evrenin bilgisel DNA'sının)} tam matematiksel karşılığıdır.
 
-\section{Kara Delik Girdabında ``Ontolojik Soyulma'': Madde Âleminin Deri Yüzer Gibi Sökülmesi}
+\section{Kara Delik Girdabında ``Ontolojik Soyulma'':\\ Madde Âleminin Deri Yüzer Gibi Sökülmesi}
 
 Yukarıdaki matematiksel türetimler, bu çalışmanın başlangıçtaki sezgisel önermesini eksiksiz bir fiziksel mekanizmaya dönüştürmektedir. Madde, kara deliğin etrafındaki girdaba kapıldığında sıradan bir mekanik ezilme yaşamaz; aksine \textbf{boyutsal bir makaslamaya (dimensional shear) ve ontolojik soyulmaya} uğrar.
 
