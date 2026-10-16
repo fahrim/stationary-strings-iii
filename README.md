@@ -2,7 +2,7 @@
 
 > **Türkçe:** [README_TR.md](./README_TR.md)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.YYYYYYY.svg)](https://doi.org/10.5281/zenodo.YYYYYYY)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23408237.svg)](https://doi.org/10.5281/zenodo.23408237)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 > **Status:** Unpublished preprint (v1, October 2026; extended complete version). Not peer-reviewed.
@@ -41,7 +41,7 @@ pdflatex -interaction=nonstopmode duran_sicimler_teoremi_III_EN.tex
   author = {Fahri Meral},
   title  = {Stationary Strings Theorem III: The Two-Dimensional Duality of Matter, Vortex Singularity and Phase Separation into Information},
   year   = {2026},
-  doi    = {10.5281/zenodo.YYYYYYY},
+  doi    = {10.5281/zenodo.23408237},
   url    = {https://github.com/fahrim/stationary-strings-iii}
 }
 ```
